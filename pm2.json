@@ -1,0 +1,17 @@
+{
+  "apps": [
+    {
+      "name": "koa2-docker",
+      "script": "bin/www",
+      "cwd": "",
+      "exec_mode": "fork",
+      "instances": 1,
+      "autorestart": true,
+      "node_args": [],
+      "args": [],
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}

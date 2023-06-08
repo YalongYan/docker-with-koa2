@@ -15,10 +15,12 @@ WORKDIR /app/koa2-demo
 
 # 安装项目依赖包
 RUN npm install --registry=https://registry.npm.taobao.org
-
+RUN npm install pm2 -g --registry=https://registry.npm.taobao.org
 
 # 容器对外暴露的端口号(这个3000 必须是当前node项目的端口)
 EXPOSE 3000
 
 # 容器启动时执行的命令，类似npm run start
-CMD ["npm", "start"]
+# CMD ["npm", "start"]
+CMD ["pm2-runtime", "pm2.json"]
+# CMD ["pm2", "pm2.json"]
